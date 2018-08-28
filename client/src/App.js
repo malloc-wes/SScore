@@ -26,8 +26,8 @@ class App extends React.Component{
         });
     }
 
-    handleLogin = event => {
-        API.login()
+    handleLogin = userInfo => {
+        API.login(userInfo)
         .then(function(data){
             this.setState({
                 user: data.data
